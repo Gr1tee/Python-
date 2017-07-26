@@ -370,21 +370,163 @@
 # print b.howMany()
 # print a.howMany()
 
-class TestStaticMethod:
-	def foo():
-		print 'calling static method foo()'
-	foo=staticmethod(foo)
+# class TestStaticMethod:
+# 	def foo():
+# 		print 'calling static method foo()'
+# 	foo=staticmethod(foo)
 
-class TestClassMethod:
-	def foo(cls):
-		print 'calling class method foo()'
-		print 'foo() is part of class:',cls._name_
+# class TestClassMethod:
+# 	def foo(cls):
+# 		print 'calling class method foo()'
+# 		print 'foo() is part of class:',cls._name_
 
-	foo=classmethod(foo)
+# 	foo=classmethod(foo)
 
-TestStaticMethod.foo()
-tsm=TestStaticMethod()
-tsm.foo()
+# TestStaticMethod.foo()
+# tsm=TestStaticMethod()
+# tsm.foo()
+
+# class Parent(object):
+# 	def parentMethod(self):
+# 		print 'calling parent method'
+
+# class Child(Parent):
+# 	def childMethod(self):
+# 		print 'calling child method'
+
+# p=Parent()
+# p.parentMethod()
+# c=Child()
+# c.childMethod()
+# class P(object):
+# 	pass
+# class C(P):
+# 	pass
+
+# c=C()
+# print c.__class__
+# p=P()
+# print p.__class__
+
+# class P(object):
+# 	'P class'
+# 	def __init__(self):
+# 		print 'created an instance of',self.__class__.__name__
+
+# class C(P):
+# 	pass
+
+# p=P()
+# c=C()
+
+# print p.__class__
+# print c.__class__
+# print P.__bases__
+# print C.__bases__
+
+# class P(object):
+# 	def foo(self):
+# 		print 'Hi,I am P-foo()'
+
+# p=P()
+# p.foo()
+
+# class C(P):
+# 	def foo(self):
+# 		print 'Hi,I am C-foo'
+
+# c=C()
+# c.foo()
+
+# p.foo()
+
+# class C(P):
+# 	def foo(self):
+# 		P.foo(self)
+# 		print 'Hi,I am C-foo'
+
+# c=C()
+# c.foo()
+
+# class C(P):
+# 	def foo(self):
+# 		super(C,self).foo()
+# 		print 'Hi,I am C-foo()'
+
+# c=C()
+# c.foo()
+
+# class P(object):
+# 	def __init__(self):
+# 		print "calling P's constructor"
+
+# class C(P):
+# 	def __init__(self):
+# 		P.__init__(self)
+# 		print "calling C's constructor"
+
+# c=C()
+
+# class RoundFloat(float):
+# 	def __new__(cls,val):
+# 		# return float.__new__(cls,round(val,2))
+# 		return super(RoundFloat,cls).__new__(cls,round(val,2))
+
+# class SortedKeyDict(dict):
+# 	def keys(self):
+# 		# return sorted(super(SortedKeyDict,self).keys())
+# 		return sorted(self.keys())
+
+# class P1(object):
+# 	def foo(self):
+# 		print 'called P1-foo()'
+# class P2(object):
+# 	def foo(self):
+# 		print 'called P2-foo()'
+
+# 	def bar(self):
+# 		print 'called P2-bar()'
+
+# class C1(P1,P2):
+# 	pass
+
+# class C2(P2,P1):
+# 	def bar(self):
+# 		print 'called C2-bar()'
+
+# class GC(C1,C2):
+# 	pass
+
+# gc=GC()
+# gc.foo()
+# gc.bar()
+
+# class myClass(object):
+# 	def __init__(self):
+# 		self.foo=100
+
+# myInst=myClass()
+# print hasattr(myInst,'foo')
+# print getattr(myInst,'foo')
+# getattr(c,'bar','oops!')
+
+# class RoundFloatManual(object):
+# 	def __init__(self,val):
+# 		assert isinstance(val,float),"Value must be a float!"
+# 		self.value=round(val,2)
+# 	def __str__(self):
+# 		return str(self.value)
+
+# 	__repr__=__str__
+# rfm=RoundFloatManual(4.2654564654)
+# print rfm
+
+
+
+
+
+
+
 
 
 
