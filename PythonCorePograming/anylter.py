@@ -18,10 +18,14 @@ class AnyIter(object):
 					raise
 
 		return retval
+
+
 # a=AnyIter(range(10))
 # i=iter(a)
 # for j in range(1,5):
 # 	print j,':',i.next(j)
+
+
 a=AnyIter(range(10),True)
 i=iter(a)
 print i.next(14)

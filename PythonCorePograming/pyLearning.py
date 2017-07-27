@@ -1,6 +1,6 @@
 # class C:
-# 	def _nonzero_(self):
-# 		return False
+#   def _nonzero_(self):
+#       return False
 # c=C
 # print bool(c)
 # from decimal import Decimal
@@ -15,13 +15,13 @@
 # s='abcde'
 # i=-1
 # for i in range(-1,-len(s),-1):
-# 	print s[:i]
+#   print s[:i]
 # print range(0,5,-1)
 # a=range(0,2)
 # print a
 # s='abcde'
 # for i in [None]+range(-1,-len(s),-1):
-#  	print  s[:i]
+#   print  s[:i]
 # aString='hello world'
 # anotherString='Python is cool!'
 # print aString
@@ -55,15 +55,15 @@
 # print 'Testees must be at least 2 chars long.'
 # myInput=raw_input('Identifier to test?')
 # if len(myInput)>1:
-# 	if myInput[0] not in alphas:
-# 		print '''invalid:first symbol must be alphabetic'''
-# 	else:
-# 		for otherChar in myInput[1:]:
-# 			if otherChar not in alphas+nums:
-# 				print '''invalid:remaining symbols must be alphanumeric'''
-# 				break
-# 			else:
-# 				print "okay as an identifier"
+#   if myInput[0] not in alphas:
+#       print '''invalid:first symbol must be alphabetic'''
+#   else:
+#       for otherChar in myInput[1:]:
+#           if otherChar not in alphas+nums:
+#               print '''invalid:remaining symbols must be alphanumeric'''
+#               break
+#           else:
+#               print "okay as an identifier"
 # foo='Hello' ' ' 'world'
 # print foo
 # from string import Template
@@ -80,7 +80,7 @@
 # print a
 # s='foobar'
 # for i, t in enumerate(s):
-# 	print i, t
+#   print i, t
 # s,t='foa','bar'
 # a=zip(s,t)
 # print a
@@ -94,45 +94,45 @@
 # stack=[]
 
 # def pushit():
-# 	stack.append(raw_input('Enter New string:').strip())
+#   stack.append(raw_input('Enter New string:').strip())
 
 # def popit():
-# 	if len(stack)==0:
-# 		print 'Cannot pop from an empty stack'
-# 	else:
-# 		print 'Remove [',`stack.pop()`,']'
+#   if len(stack)==0:
+#       print 'Cannot pop from an empty stack'
+#   else:
+#       print 'Remove [',`stack.pop()`,']'
 
 # def viewstack():
-# 	print stack
+#   print stack
 
 # def showmenu():
-# 	pr="""p(U)sh
-# 	p(O)p (V)iew
-# 	(Q)uit
-# 	Enter choice:"""
+#   pr="""p(U)sh
+#   p(O)p (V)iew
+#   (Q)uit
+#   Enter choice:"""
 
-# 	while True:
-# 		while True:
-# 			try:
-# 				choice==raw_input(pr).strip()[0].lower()
-# 			except (EOFError,KeyboardInterrupt,IndexError):
-# 				choice='q'
+#   while True:
+#       while True:
+#           try:
+#               choice==raw_input(pr).strip()[0].lower()
+#           except (EOFError,KeyboardInterrupt,IndexError):
+#               choice='q'
 
-# 			print '\nYou picked:[%s]'%choice
-# 			if choice not in 'uovq':
-# 				print 'Invalid option,try again'
-# 			else:
-# 				break
+#           print '\nYou picked:[%s]'%choice
+#           if choice not in 'uovq':
+#               print 'Invalid option,try again'
+#           else:
+#               break
 
-# 		if choice=='q':
-# 			break
-# 		CMDs[choice]()
+#       if choice=='q':
+#           break
+#       CMDs[choice]()
 
 # showmenu()
 
 # s=set('cheeseshop')
 # for i in s:
-# 	print i,
+#   print i,
 # myTuple=(123,'xyz',45.67)
 # i=iter(myTuple)
 # print i.next()
@@ -141,18 +141,18 @@
 # print i.next()
 # rows=[1,2,3,17]
 # def cols:
-# 	yield 56
-# 	yield 2
-# 	yield 1
+#   yield 56
+#   yield 2
+#   yield 1
 # import os
 # filename=raw_input('Enter file name:')
 # fobj=open(filename,'w')
 # while True:
-# 	aLine=raw_input("Enter a line('.'to quit):")
-# 	if aLine != ".":
-# 		fobj.write('%s%s'%(aLine,os.linesep))
-# 	else:
-# 		break
+#   aLine=raw_input("Enter a line('.'to quit):")
+#   if aLine != ".":
+#       fobj.write('%s%s'%(aLine,os.linesep))
+#   else:
+#       break
 # fobj.close()
 # f=open('/tmp/x','w+')
 # f.tell()
@@ -161,67 +161,67 @@
 # print 'they were:',str(sys.argv)
 # import os
 # for tmpdir in ('/tmp/',r'c:/tmp'):
-# 	if os.path.isdir(tmpdir):
-# 		break
-# 	else :
-# 		print 'no temp directory available'
-# 		temdir=''
+#   if os.path.isdir(tmpdir):
+#       break
+#   else :
+#       print 'no temp directory available'
+#       temdir=''
 
 # if tmpdir:
-# 	os.chdir(tmpdir)
-# 	cwd=os.getcwd()
-# 	print '***current temporary directory:'
-# 	print cwd
+#   os.chdir(tmpdir)
+#   cwd=os.getcwd()
+#   print '***current temporary directory:'
+#   print cwd
 
-# 	print '***creating example directory...'
-# 	os.mkdir('example')
-# 	os.chdir('example')
-# 	cwd=os.getcwd()
-# 	print '***new working direcory:'
-# 	print cwd
-# 	print '***original directory listing:'
-# 	print os.listdir(cwd)
-# 	print '***creating test file...'
-# 	fobj=open('test','w')
-# 	fobj.write('foo\n')
-# 	fobj.write('bar\n')
-# 	fobj.close()
-# 	print '***updated directory listing:'
-# 	print os.listdir(cwd)
+#   print '***creating example directory...'
+#   os.mkdir('example')
+#   os.chdir('example')
+#   cwd=os.getcwd()
+#   print '***new working direcory:'
+#   print cwd
+#   print '***original directory listing:'
+#   print os.listdir(cwd)
+#   print '***creating test file...'
+#   fobj=open('test','w')
+#   fobj.write('foo\n')
+#   fobj.write('bar\n')
+#   fobj.close()
+#   print '***updated directory listing:'
+#   print os.listdir(cwd)
 
-# 	print "***tenaming 'test' to 'filetest.txt'"
-# 	os.rename('test','filetest.txt')
-# 	print '***updated directory listing:'
-# 	print os.listdir(cwd)
+#   print "***tenaming 'test' to 'filetest.txt'"
+#   os.rename('test','filetest.txt')
+#   print '***updated directory listing:'
+#   print os.listdir(cwd)
 
-# 	path=os.path.join(cwd,os.listdir(cwd)[0])
-# 	print '***full file pathname'
-# 	print path
-# 	print '***(pathname,basename)=='
-# 	print os.path.split(path)
-# 	print '***(filename,extension)=='
-# 	print os.path.splitext(os.path.basename(paht))
+#   path=os.path.join(cwd,os.listdir(cwd)[0])
+#   print '***full file pathname'
+#   print path
+#   print '***(pathname,basename)=='
+#   print os.path.split(path)
+#   print '***(filename,extension)=='
+#   print os.path.splitext(os.path.basename(paht))
 
-# 	print '***displaying file contents:'
-# 	fobj=open(path)
-# 	for eachLine in fobj:
-# 		print eachLine,
-# 	fobj.close()
+#   print '***displaying file contents:'
+#   fobj=open(path)
+#   for eachLine in fobj:
+#       print eachLine,
+#   fobj.close()
 
-# 	print '****deleting test file'
-# 	os.remove(path)
-# 	print '***updated directory listing:'
-# 	print os.listdir(cwd)
-# 	os.chdir(os.pardir)
-# 	print '***deleting test directory'
-# 	os.rmdir('example')
-# 	print '***DONE'
+#   print '****deleting test file'
+#   os.remove(path)
+#   print '***updated directory listing:'
+#   print os.listdir(cwd)
+#   os.chdir(os.pardir)
+#   print '***deleting test directory'
+#   os.rmdir('example')
+#   print '***DONE'
 # def tupleVarArgs(arg1,arg2='defaultB',*theRest):
-# 	'display regular args and non-keyword variable args'
-# 	print 'formal arg 1:',arg1
-# 	print 'formal arg 2:',arg2
-# 	for eachXtrArg in theRest:
-# 		print 'another arg:',eachX
+#   'display regular args and non-keyword variable args'
+#   print 'formal arg 1:',arg1
+#   print 'formal arg 2:',arg2
+#   for eachXtrArg in theRest:
+#       print 'another arg:',eachX
 
 # true=lambda :True
 # true()
@@ -230,24 +230,24 @@
 # from random import randint
 
 # def odd(n):
-# 	return n%2
+#   return n%2
 
 # allNums=[]
 # for eachNum in range(9):
-# 	allNums.append(randint(1,99))
+#   allNums.append(randint(1,99))
 
 # print filter(odd,allNums)
 
 # from random import randint
 # allNums=[]
 # for eachNum in range(9):
-# 	allNums.append(randint(1,99))
+#   allNums.append(randint(1,99))
 # print filter(lambda n:n%2,allNums)
 
 # from random import randint
 # allNums=[]
 # for eachNum in range(9):
-# 	allNums.append(randint(1,99))
+#   allNums.append(randint(1,99))
 # print [n for n in allNums if n%2]
 
 # from random import randint as ri
@@ -272,9 +272,9 @@
 # root.mainloop()
 
 # def foo():
-# 	print "\ncalling foo()..."
-# 	bar=200
-# 	print "in foo(),bar is",bar
+#   print "\ncalling foo()..."
+#   bar=200
+#   print "in foo(),bar is",bar
 # bar=100
 # print "in __main__,bar is",bar
 # foo()
@@ -282,30 +282,30 @@
 
 # is_this_global='xyz'
 # def foo():
-# 	global is_this_global
-# 	this_is_local='abc'
-# 	is_this_global='def'
-# 	print this_is_local+is_this_global
+#   global is_this_global
+#   this_is_local='abc'
+#   is_this_global='def'
+#   print this_is_local+is_this_global
 
 # foo()
 # print is_this_global
 
 # def counter(start_at=0):
-# 	count=[start_at]
-# 	def incr():
-# 		count[0]+=1
-# 		return count[0]
-# 	return incr
+#   count=[start_at]
+#   def incr():
+#       count[0]+=1
+#       return count[0]
+#   return incr
 
 # def procl():
-# 	j,k=3,4
-# 	print "j==%d and k==%d"%(j,k)
-# 	k=5
+#   j,k=3,4
+#   print "j==%d and k==%d"%(j,k)
+#   k=5
 
 # def proc2():
-# 	j=6
-# 	procl()
-# 	print "j==%d and k==%d"%(j,k)
+#   j=6
+#   procl()
+#   print "j==%d and k==%d"%(j,k)
 
 # k=7
 
@@ -318,51 +318,51 @@
 
 # from random import randint
 # def randGen(aList):
-# 	while len(aList)>0:
-# 		yield aList.pop(randint(0,len(aList)))
+#   while len(aList)>0:
+#       yield aList.pop(randint(0,len(aList)))
 
 # for item in randGen('rock','paper','scissors'):
-# 	print item
+#   print item
 
 # def foo():
-# 	pass
+#   pass
 # foo._doc_='Oops,forgot to add doc str above!'
 # foo.version=0.2
 
 # class MyClass(object):
-# 	'MyClass class definition'
-# 	myVersion='1.1'
-# 	def showMyVersion(self):
-# 		print MyClass.myVersion
+#   'MyClass class definition'
+#   myVersion='1.1'
+#   def showMyVersion(self):
+#       print MyClass.myVersion
 
 # print dir(MyClass)
 # print MyClass.__dict__
 
 # class C(object):
-# 	pass
+#   pass
 
 # print C.__module__
 
 # class C(P):
-# 	def __init__(self):
-# 		print 'initialized'
-# 	def __del__(self):
-# 		p.__del__(self)
-# 		print 'deleted'
+#   def __init__(self):
+#       print 'initialized'
+#   def __del__(self):
+#       p.__del__(self)
+#       print 'deleted'
 
 # c1=C()
 
 # class InstCt(object):
-# 	count=0
+#   count=0
 
-# 	def __init__(self):
-# 		InstCt.count+=1
+#   def __init__(self):
+#       InstCt.count+=1
 
-# 	def __del__(self):
-# 		InstCt.count-=1
+#   def __del__(self):
+#       InstCt.count-=1
 
-# 	def howMany(self):
-# 		return InstCt.count
+#   def howMany(self):
+#       return InstCt.count
 
 # a=InstCt()
 # b=InstCt()
@@ -371,37 +371,37 @@
 # print a.howMany()
 
 # class TestStaticMethod:
-# 	def foo():
-# 		print 'calling static method foo()'
-# 	foo=staticmethod(foo)
+#   def foo():
+#       print 'calling static method foo()'
+#   foo=staticmethod(foo)
 
 # class TestClassMethod:
-# 	def foo(cls):
-# 		print 'calling class method foo()'
-# 		print 'foo() is part of class:',cls._name_
+#   def foo(cls):
+#       print 'calling class method foo()'
+#       print 'foo() is part of class:',cls._name_
 
-# 	foo=classmethod(foo)
+#   foo=classmethod(foo)
 
 # TestStaticMethod.foo()
 # tsm=TestStaticMethod()
 # tsm.foo()
 
 # class Parent(object):
-# 	def parentMethod(self):
-# 		print 'calling parent method'
+#   def parentMethod(self):
+#       print 'calling parent method'
 
 # class Child(Parent):
-# 	def childMethod(self):
-# 		print 'calling child method'
+#   def childMethod(self):
+#       print 'calling child method'
 
 # p=Parent()
 # p.parentMethod()
 # c=Child()
 # c.childMethod()
 # class P(object):
-# 	pass
+#   pass
 # class C(P):
-# 	pass
+#   pass
 
 # c=C()
 # print c.__class__
@@ -409,12 +409,12 @@
 # print p.__class__
 
 # class P(object):
-# 	'P class'
-# 	def __init__(self):
-# 		print 'created an instance of',self.__class__.__name__
+#   'P class'
+#   def __init__(self):
+#       print 'created an instance of',self.__class__.__name__
 
 # class C(P):
-# 	pass
+#   pass
 
 # p=P()
 # c=C()
@@ -425,15 +425,15 @@
 # print C.__bases__
 
 # class P(object):
-# 	def foo(self):
-# 		print 'Hi,I am P-foo()'
+#   def foo(self):
+#       print 'Hi,I am P-foo()'
 
 # p=P()
 # p.foo()
 
 # class C(P):
-# 	def foo(self):
-# 		print 'Hi,I am C-foo'
+#   def foo(self):
+#       print 'Hi,I am C-foo'
 
 # c=C()
 # c.foo()
@@ -441,69 +441,69 @@
 # p.foo()
 
 # class C(P):
-# 	def foo(self):
-# 		P.foo(self)
-# 		print 'Hi,I am C-foo'
+#   def foo(self):
+#       P.foo(self)
+#       print 'Hi,I am C-foo'
 
 # c=C()
 # c.foo()
 
 # class C(P):
-# 	def foo(self):
-# 		super(C,self).foo()
-# 		print 'Hi,I am C-foo()'
+#   def foo(self):
+#       super(C,self).foo()
+#       print 'Hi,I am C-foo()'
 
 # c=C()
 # c.foo()
 
 # class P(object):
-# 	def __init__(self):
-# 		print "calling P's constructor"
+#   def __init__(self):
+#       print "calling P's constructor"
 
 # class C(P):
-# 	def __init__(self):
-# 		P.__init__(self)
-# 		print "calling C's constructor"
+#   def __init__(self):
+#       P.__init__(self)
+#       print "calling C's constructor"
 
 # c=C()
 
 # class RoundFloat(float):
-# 	def __new__(cls,val):
-# 		# return float.__new__(cls,round(val,2))
-# 		return super(RoundFloat,cls).__new__(cls,round(val,2))
+#   def __new__(cls,val):
+#       # return float.__new__(cls,round(val,2))
+#       return super(RoundFloat,cls).__new__(cls,round(val,2))
 
 # class SortedKeyDict(dict):
-# 	def keys(self):
-# 		# return sorted(super(SortedKeyDict,self).keys())
-# 		return sorted(self.keys())
+#   def keys(self):
+#       # return sorted(super(SortedKeyDict,self).keys())
+#       return sorted(self.keys())
 
 # class P1(object):
-# 	def foo(self):
-# 		print 'called P1-foo()'
+#   def foo(self):
+#       print 'called P1-foo()'
 # class P2(object):
-# 	def foo(self):
-# 		print 'called P2-foo()'
+#   def foo(self):
+#       print 'called P2-foo()'
 
-# 	def bar(self):
-# 		print 'called P2-bar()'
+#   def bar(self):
+#       print 'called P2-bar()'
 
 # class C1(P1,P2):
-# 	pass
+#   pass
 
 # class C2(P2,P1):
-# 	def bar(self):
-# 		print 'called C2-bar()'
+#   def bar(self):
+#       print 'called C2-bar()'
 
 # class GC(C1,C2):
-# 	pass
+#   pass
 
 # gc=GC()
 # gc.foo()
 # gc.bar()
 
 # class myClass(object):
-# 	def __init__(self):
-# 		self.foo=100
+#   def __init__(self):
+#       self.foo=100
 
 # myInst=myClass()
 # print hasattr(myInst,'foo')
@@ -511,16 +511,160 @@
 # getattr(c,'bar','oops!')
 
 # class RoundFloatManual(object):
-# 	def __init__(self,val):
-# 		assert isinstance(val,float),"Value must be a float!"
-# 		self.value=round(val,2)
-# 	def __str__(self):
-# 		return str(self.value)
+#   def __init__(self,val):
+#       assert isinstance(val,float),"Value must be a float!"
+#       self.value=round(val,2)
+#   def __str__(self):
+#       return str(self.value)
 
-# 	__repr__=__str__
+#   __repr__=__str__
 # rfm=RoundFloatManual(4.2654564654)
 # print rfm
 
+# class WrapMe(object):
+#   def __init__(self,obj):
+#       self.__data=obj
+
+#   def get(self):
+#       return self.__data
+
+#   def __repr__(self):
+#       return 'self.__data'
+
+#   def __str__(self):
+#       return str(self.__data)
+
+#   def __getattr__(self,attr):
+#       return getattr(self.__data,attr)
+
+# wrappedComplex=WrapMe(3.5+4.2j)
+# print wrappedComplex
+
+# from time import time, ctime
+# class TimedWrapMe(object):
+#     def __init__(self, obj):
+#         self.__data = obj
+#         self.__ctime = self.__mtime = self.__atime = time()
+#     def get(self):
+#         self.__atime = time()
+#         return self.__data
+#     def gettimeval(self, t_type):
+#         if not isinstance(t_type, str) or t_type[0] not in "cma":
+#             raise TypeError, "argument of 'c','m', or 'a' required"
+#         return getattr(self, "_%s__%stime" % (self.__class__.__name__, t_type[0]))
+#     def gettimestr(self, t_type):
+#         return ctime(self.gettimeval(t_type))
+#     def set(self, obj):
+#         self.__data = obj
+#         self.__mtime = self.__atime = time()
+#     def __repr__(self):
+#         self.__atime = time()
+#         return repr(self.__data)
+#     def __str__(self):
+#         self.__atime = time()
+#         return str(self.__data)
+#     def __getattr__(self, attr):
+#         self.__atime = time()
+#         return getattr(self.__data, attr)
+
+#  timeWrappedObj = TimedWrapMe(932)
+
+# class DevNulll(object):
+#     def __get__(self,obj,typ=None):
+#         pass
+#     def __set__(self,obj,val):
+#         pass
+
+# class C1(object):
+#     foo=DevNulll()
+
+# c1=C1()
+# c1.foo='bar'
+# print 'c1.foo contains:',c1.foo
+
+# class DevNull2(object):
+#     def __get__(self,obj,typ=None):
+#         print 'Accessing attribute...ignoring'
+
+#     def __set__(self,obj,val):
+#         print 'Attempt to assign %r...ignoring'%(val)
+
+# class C2(object):
+#     foo=DevNull2()
+
+# c2=C2()
+# c2.foo='bar'
+# print c2.foo
+
+# class DevNull3(object):
+#     def __init__(self,name=None):
+#         self.name=name
+
+#     def __get__(self,obj,typ=None):
+#         print 'Accessing [%s]...ignoring'%(self.name)
+
+#     def __set__(self,obj,val):
+#         print 'Assigning %r to [%s]...ignoring'%(val,self.name)
+
+# class C3(object):
+#     foo=DevNull3('foo')
+
+# c3=C3()
+# c3.foo='bar'
+
+# class ProtectAndHideX(object):
+#     def __init__(self,x):
+#         assert isinstance(x,int),"'x' must be an integer!"
+#         self._x=~x
+
+#     def get_x(self):
+#         return ~self._x
+
+#     x=property(get_x)
+
+# # inst=ProtectAndHideX('foo')
+# inst=ProtectAndHideX(10)
+# print 'inst.x=',inst.x
+# # inst.x=20
+
+# class HideX(object):
+#     def __init__(self,x):
+#         self.x=x
+
+#     def get_x(self):
+#         return ~self._x
+
+#     def set_x(self,x):
+#         assert isinstance(x,int),'"x" must be an integer!'
+#         self._x=~x
+
+#     x=property(get_x,set_x)
+
+# inst=HideX(20)
+# print inst.x
+
+# from math import pi
+
+# def get_pi(dummy):
+#     return pi
+
+# class PI(object):
+#     pi=property(get_pi,doc='Constant"pi"')
+
+class HideX(object):
+    def __init__(self,x):
+        self.x=x
+    
+    @property
+   
+    def x():
+        def fget(self):
+            return ~self._x
+        def fset(self,x):
+            assert isinstance(x,int),'"x" must be an integer!'
+            self._x=~x
+
+        return locals()        
 
 
 
