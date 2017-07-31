@@ -651,20 +651,63 @@
 # class PI(object):
 #     pi=property(get_pi,doc='Constant"pi"')
 
-class HideX(object):
-    def __init__(self,x):
-        self.x=x
+# class HideX(object):
+#     def __init__(self,x):
+#         self.x=x
     
-    @property
+#     @property
    
-    def x():
-        def fget(self):
-            return ~self._x
-        def fset(self,x):
-            assert isinstance(x,int),'"x" must be an integer!'
-            self._x=~x
+#     def x():
+#         def fget(self):
+#             return ~self._x
+#         def fset(self,x):
+#             assert isinstance(x,int),'"x" must be an integer!'
+#             self._x=~x
 
-        return locals()        
+#         return locals()        
+
+# from time import ctime
+
+# print '***Welcome to Metaclasses!'
+# print '\tMetaclass declaration first.'
+
+# class MetaC(type):
+#     def __init__(cls,name,bases,attrd):
+#         super(MetaC,cls).__init__(name,bases,attrd)
+#         print '***Created class %r at:%s'%(name,ctime())
+
+# print '\tClass "Foo" declaration next.'
+
+# class Foo(object):
+#     __metaclass__=MetaC
+#     def __init__(self):
+#         print '***Instantiated class %r at:%s'%(self.__class__.__name__,ctime())
+
+# print '\tClass "Foo" instantiation next.'
+# f=Foo()
+# print '\tDONE'
+
+# from warnings import warn
+# class ReqStrSugRepr(type):
+#     def __init__(cls,name,bases,attrd):
+#         super(ReqStrSugRepr, cls).__init__(name, bases, attrd)
+#         if '__str__' not in attrd:
+#             raise TypeError("class requires overriding of __str__()")
+#         if '__repr__' not in attrd:
+#             warn('Class suggests overriding of __repr__()\n',stacklevel=3)
+
+
+# from warnings import warn
+# class ReqStrSugRepr(type):
+#     def __init__(cls, name, bases, attrd):
+#         super(ReqStrSugRepr, cls).__init__(name, bases, attrd)
+#         if "__str__" not in attrd:
+#             raise TypeError("class requires overriding of __str__()")
+#         if "__repr__" not in attrd:
+#             warn("class suggests overriding of __repr__()\n", stacklevel = 3)
+# # print "***defined ReqStrSugRepr (meta)class\n"
+
+
 
 
 
